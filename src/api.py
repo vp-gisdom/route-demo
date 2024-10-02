@@ -2,7 +2,7 @@ import requests
 
 
 def points_by_windspeed(points, max_speed):
-    return [(i.x, i.y) for i in points if get_wind_speed(i.x, i.y) > max_speed]
+    return [(i.x, i.y) for i in points if get_wind_speed(i.y, i.x) > max_speed]
 
 
 def get_wind_speed(lat, lon):
